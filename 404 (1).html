@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lava Fitness</title>
+<script>
+// GitHub Pages SPA redirect trick
+// Converts /socks -> index.html#product-throwback-sock
+var pathMap = {
+  '/socks': 'product-throwback-sock',
+  '/collection': 'collection',
+  '/faq': 'faq',
+  '/contact': 'contact'
+};
+var path = location.pathname.replace(/\/+$/, '').toLowerCase();
+var hash = pathMap[path] || 'home';
+location.replace(location.origin + '/#' + hash);
+</script>
+</head>
+<body>
+</body>
+</html>
